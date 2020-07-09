@@ -1,0 +1,148 @@
+<mat-card class="example-card">
+  <!-- start Header title, settings and close -->
+  <mat-card-header class="header-card">
+    <mat-card-title class="card-title">Chat</mat-card-title>
+    <span class="spacer"></span>
+
+    <button mat-button class="more-button" [routerLink]="['/#']">John Douey<mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <button mat-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-button class="more-button" aria-label="Toggle menu">
+      <mat-icon>close</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Privacy</button>
+    </mat-menu>
+  </mat-card-header>
+  <!-- End Header title, settings and close -->
+
+  <!-- Start main chat content -->
+  <mat-card-content>
+    <!-- <mat-card>
+        <mat-list>
+          <ng-template let-item let-i="index" let-last="last" ngFor [ngForOf]="[0,1,2,3,4,5,6,7,8,9]">
+            <mat-list-item class="pad-top pad-bottom">
+              <img matListAvatar src="https://api.adorable.io/avatars/285/{{i}}@adorable.io.png" />
+              <h3 matLine><a [routerLink]="['/#']"> John Douey </a> <span class="tc-grey-500 md-caption">at 11:24
+                  AM</span></h3>
+              <div matLine>
+                <div class="text-wrap">
+                  {{ 'Message text paragraph' }}
+                </div>
+              </div>
+            </mat-list-item>          
+          </ng-template>
+        </mat-list>
+      </mat-card> -->
+    <div flex class="mat-content">
+      <!-- start sender message class="in" -->
+      <mat-card class="in">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+
+          <mat-card-content class="text-content-in">
+            <a class="md-title">John Douey<span> at 07.08.2020</span></a>
+            <span class="md-subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sequi nihil, eos
+              consequatur qui ipsam at sed reiciendis doloremque nostrum neque repudiandae, quaerat aliquid officiis,
+              porro expedita quidem aut odit!</span>
+          </mat-card-content>
+        </mat-card-header>
+      </mat-card>
+      <!-- End sender message class="in" -->
+      <!--Start Receive message class="out" -->
+      <mat-card class="out">
+        <mat-card-header>
+          <div class="text-content-out">
+            <a class="md-title">John Douey<span> 3 hour ago</span></a>
+            <span class="md-subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sequi nihil, eos
+              consequatur qui ipsam at sed reiciendis doloremque nostrum neque repudiandae, quaerat aliquid officiis,
+              porro expedita quidem aut odit!</span>
+          </div>
+          <span class="out-avatar">
+            <div mat-card-avatar class="example-header-image"></div>
+          </span>
+
+        </mat-card-header>
+      </mat-card>
+
+      <!-- End Receive message class="out" -->
+      <!-- Start sender message class="in" -->
+      <mat-card class="in">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+
+          <mat-card-content class="text-content-in">
+            <a class="md-title">John Douey<span> 2 hours ago</span></a>
+            <span class="md-subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sequi nihil, eos
+              consequatur qui ipsam at sed reiciendis doloremque nostrum neque repudiandae, quaerat aliquid officiis,
+              porro expedita quidem aut odit!</span>
+          </mat-card-content>
+        </mat-card-header>
+      </mat-card>
+      <!-- End sender message class="in" -->
+      <!-- Start Receive message class="out" -->
+      <mat-card class="out">
+        <mat-card-header>
+          <div class="text-content-out">
+            <a class="md-title">John Douey<span> 1 hour ago</span></a>
+            <span class="md-subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sequi nihil, eos
+              consequatur qui ipsam at sed reiciendis doloremque nostrum neque repudiandae, quaerat aliquid officiis,
+              porro expedita quidem aut odit!</span>
+          </div>
+          <span class="out-avatar">
+            <div mat-card-avatar class="example-header-image"></div>
+          </span>
+        </mat-card-header>
+      </mat-card>
+      <!-- End Receive message class="out" -->
+      <!-- Start sender message class="in" -->
+      <mat-card class="in">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+
+          <mat-card-content class="text-content-in">
+            <a class="md-title">John Douey<span> at 53 minutes ago</span></a>
+            <span class="md-subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sequi nihil, eos
+              consequatur qui ipsam at sed reiciendis doloremque nostrum neque repudiandae, quaerat aliquid officiis,
+              porro expedita quidem aut odit!</span>
+          </mat-card-content>
+        </mat-card-header>
+      </mat-card>
+      <!-- End sender message class="in" -->
+      <!-- Start Receive message class="out" -->
+      <mat-card class="out">
+        <mat-card-header>
+          <mat-card-content class="text-content-out">
+            <a class="md-title">John Douey<span> 2 minutes ago</span></a>
+            <span class="md-subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sequi nihil, eos
+              consequatur qui ipsam at sed reiciendis doloremque nostrum neque repudiandae, quaerat aliquid officiis,
+              porro expedita quidem aut odit!</span>
+          </mat-card-content>
+
+          <span class="out-avatar">
+            <div mat-card-avatar class="example-header-image"></div>
+          </span>
+        </mat-card-header>
+      </mat-card>
+      <!-- End Receive message class="out" -->
+    </div>
+  </mat-card-content>
+  <!-- End main chat content  -->
+
+  <!-- Start Send message Feild -->
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input placeholder="Type your message here...">
+
+      <button mat-icon-button class="send-icon">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+
+
+    </mat-form-field>
+  </form>
+  <!-- End Send message Feild -->
+</mat-card>

@@ -1,0 +1,110 @@
+
+.example-card {
+  max-width: 600px;
+  margin: 20px;
+  padding: 0 !important;
+  /* position: absolute;
+  top: 10%;
+  left: 30%; */
+}
+
+.bg-color
+{
+  background-color: #418bca;
+  color: white;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+.title-align
+{
+  font-weight: 700;
+  font-family:Dosis,Arial,sans-serif ;
+font-size: 20px;
+line-height: 26px;
+
+}
+.dashboard-card-content {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+
+.header-card
+{
+  line-height: 2;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.card-title
+{
+  font-family: card-title;
+}
+.more-button
+{
+  font-family: Dosis,Arial,sans-serif;
+  /* border-left: 1px solid rgba(14, 10, 10, 0.1);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; */
+}
+.example-chip-list {
+  width: 100%;
+}
+/* .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+} */
+
+.example-full-width {
+  width: 100%;
+}
+.example-selected-value {
+  margin: 15px 0;
+}
+.bg-btn-group
+{
+  background-color: #e7eaeb;
+
+}
+.bg-inner-group
+{
+  padding: 10px 20px;
+}
+.mat-card-content
+{
+  margin-bottom: 0px;
+}
+.bg-para-content
+{
+  background-color: white;
+  height: 200px;
+  padding: 10px 20px;
+}
+.bg-para-content span{
+color: #418bca;
+
+}
+.mat-card-footer
+{
+  margin: 0;
+  padding: 30px 10px;
+}
+.grp-align
+{
+  margin: 0px 3px;
+}
+.btn-align{
+  /* position: relative; */
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
