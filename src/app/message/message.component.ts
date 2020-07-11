@@ -5,7 +5,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { MatChipInputEvent } from '@angular/material/chips';
 
 
-export interface Fruit {
+export interface Tech {
   name: string;
 }
 
@@ -22,7 +22,7 @@ export class MessageComponent {
   removable = true;
   addOnBlur = true;
    readonly separatorKeysCodes: number[] = [ENTER, COMMA];
-    fruits: Fruit[] = [
+    tech: Tech[] = [
     {name: 'React'},
     {name: 'Angular'},
 
@@ -31,16 +31,16 @@ export class MessageComponent {
     const input = event.input;
     const value = event.value;
     if ((value || '').trim()) {
-      this.fruits.push({name: value.trim()});
+      this.tech.push({name: value.trim()});
     }
     if (input) {
       input.value = '';
     }
   }
-  remove(fruit: Fruit): void {
-    const index = this.fruits.indexOf(fruit);
+  remove(tech: Tech): void {
+    const index = this.tech.indexOf(tech);
     if (index >= 0) {
-      this.fruits.splice(index, 1);
+      this.tech.splice(index, 1);
     }
   }
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(

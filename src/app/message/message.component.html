@@ -1,124 +1,127 @@
-<!--Start Main Container card -->
-<div class="container">
-  <!-- start card content -->
-  <mat-card class="example-card">
-    <!-- Start title and close buttons -->
-    <mat-card-header class="header-card bg-color">
-      <mat-card-title class="card-title"><span class="title-align">Quick</span> Message</mat-card-title>
-      <span class="spacer"></span>\
-      <!-- Start right side button options -->
-      <button mat-stroked-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-        <mat-icon>settings</mat-icon>
-      </button>
-      <button mat-stroked-button class="more-button" aria-label="Toggle menu">
-        <mat-icon>close</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu" xPosition="before">
-        <button mat-menu-item>Profile</button>
-        <button mat-menu-item>Privacy</button>
-      </mat-menu>
-      <!-- End right side button options -->
-    </mat-card-header>
-    <!-- End title and close buttons -->
-    <!-- Start input text feilds -->
-    <mat-card-content class="dashboard-card-content bg-color">
-      <div>
-        <mat-form-field class="example-chip-list">
-          <mat-chip-list #chipList aria-label="Fruit selection">
-            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
-              (removed)="remove(fruit)">
-              {{fruit.name}}
-              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-            </mat-chip>
-            <input placeholder="Enter here" [matChipInputFor]="chipList"
-              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
-              (matChipInputTokenEnd)="add($event)">
-          </mat-chip-list>
-        </mat-form-field>
-      </div>
-      <!-- Start second input feilds -->
-      <div>
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <!-- <mat-label>Type subject...</mat-label> -->
-            <input matInput placeholder="Type subject...">
-          </mat-form-field>
-        </form>
-      </div>
-      <!-- End second input feilds -->
-    </mat-card-content>
-    <!-- End input text feilds -->
-    <!-- Start body content -->
-    <div class="bg-btn-group">
-      <!-- End text button toggle -->
-      <mat-card-content class="bg-inner-group">
-        <span class="grp-align">
-          <mat-button-toggle-group>
-            <mat-button-toggle value="left" aria-label="Text align left">
-              <mat-icon>text_format</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="center" aria-label="Text align center">
-              <mat-icon> spellcheck</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="justify" disabled aria-label="Text align justify">
-              <mat-icon>text_rotation_angleup</mat-icon>
-            </mat-button-toggle>
-          </mat-button-toggle-group>
-        </span>
-        <span class="grp-align">
-          <mat-button-toggle-group>
-            <mat-button-toggle value="center" aria-label="Text align center">
-              <mat-icon>format_italic</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="justify" disabled aria-label="Text align justify">
-              <mat-icon>format_underlined</mat-icon>
-            </mat-button-toggle>
-          </mat-button-toggle-group>
-        </span>
-        <span class="grp-align">
-          <mat-button-toggle-group>
-            <mat-button-toggle value="left" aria-label="Text align left">
-              <mat-icon>format_align_left</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="center" aria-label="Text align center">
-              <mat-icon>format_align_center</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="justify" disabled aria-label="Text align justify">
-              <mat-icon>format_align_justify</mat-icon>
-            </mat-button-toggle>
-          </mat-button-toggle-group>
-        </span>
-        <span class="grp-align">
-          <mat-button-toggle-group>
-            <mat-button-toggle value="left" aria-label="Text align left">
-              <mat-icon>format_list_numbered</mat-icon>
-            </mat-button-toggle>
-            <mat-button-toggle value="center" aria-label="Text align center">
-              <mat-icon>format_list_bulleted</mat-icon>
-            </mat-button-toggle>
+<section id="message">
 
-          </mat-button-toggle-group>
-        </span>
+  <!--Start Main Container card -->
+  <div class="container">
+    <!-- start card content -->
+    <mat-card class="example-card">
+      <!-- Start title and close buttons -->
+      <mat-card-header class="header-card bg-color">
+        <mat-card-title class="card-title"><span class="title-align">Quick</span> Message</mat-card-title>
+        <span class="spacer"></span>
+        <!-- Start right side button options -->
+        <button mat-stroked-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+          <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-stroked-button class="more-button" aria-label="Toggle menu">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item>Privacy</button>
+        </mat-menu>
+        <!-- End right side button options -->
+      </mat-card-header>
+      <!-- End title and close buttons -->
+      <!-- Start input text feilds -->
+      <mat-card-content class="dashboard-card-content bg-color">
+        <div>
+          <mat-form-field class="example-chip-list">
+            <mat-chip-list #chipList aria-label="Tech selection">
+              <mat-chip *ngFor="let tec of tech" [selectable]="selectable" [removable]="removable"
+                (removed)="remove(tec)">
+                {{tec.name}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="Enter here" [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+          </mat-form-field>
+        </div>
+        <!-- Start second input feilds -->
+        <div>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <!-- <mat-label>Type subject...</mat-label> -->
+              <input matInput placeholder="Type subject...">
+            </mat-form-field>
+          </form>
+        </div>
+        <!-- End second input feilds -->
       </mat-card-content>
-      <!-- End text button toggle -->
-      <!-- Start paragraph content -->
-      <mat-card-content class="bg-para-content">
-        <h1>Try me!</h1>
-        <p>textAngular is a super cool WYSIWYG Text Editor directive for AngularJS</p>
-        <p><b>Code at GitHub:</b> <span> Here</span></p>
-      </mat-card-content>
-      <!-- End paragraph content -->
-    </div>
-    <!-- End  body content -->
-    <!-- start send message footer -->
-    <mat-card-footer class="bg-color">
-      <span class="spacer"></span>
-      <button mat-stroked-button class="primary btn-align">
-        <mat-icon>message</mat-icon>Send message
-      </button>
-    </mat-card-footer>
-    <!-- End send message footer -->
-  </mat-card>
-  <!-- End card content -->
-</div>
-<!--End Main Container card -->
+      <!-- End input text feilds -->
+      <!-- Start body content -->
+      <div class="bg-btn-group">
+        <!-- End text button toggle -->
+        <mat-card-content class="bg-inner-group">
+          <span class="grp-align">
+            <mat-button-toggle-group>
+              <mat-button-toggle value="left" aria-label="Text align left">
+                <mat-icon>text_format</mat-icon>
+              </mat-button-toggle>
+              <mat-button-toggle value="center" aria-label="Text align center">
+                <mat-icon> spellcheck</mat-icon>
+              </mat-button-toggle>
+              <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+                <mat-icon>text_rotation_angleup</mat-icon>
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </span>
+          <span class="grp-align">
+            <mat-button-toggle-group>
+              <mat-button-toggle value="center" aria-label="Text align center">
+                <mat-icon>format_italic</mat-icon>
+              </mat-button-toggle>
+              <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+                <mat-icon>format_underlined</mat-icon>
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </span>
+          <span class="grp-align">
+            <mat-button-toggle-group>
+              <mat-button-toggle value="left" aria-label="Text align left">
+                <mat-icon>format_align_left</mat-icon>
+              </mat-button-toggle>
+              <mat-button-toggle value="center" aria-label="Text align center">
+                <mat-icon>format_align_center</mat-icon>
+              </mat-button-toggle>
+              <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+                <mat-icon>format_align_justify</mat-icon>
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+          </span>
+          <span class="grp-align">
+            <mat-button-toggle-group>
+              <mat-button-toggle value="left" aria-label="Text align left">
+                <mat-icon>format_list_numbered</mat-icon>
+              </mat-button-toggle>
+              <mat-button-toggle value="center" aria-label="Text align center">
+                <mat-icon>format_list_bulleted</mat-icon>
+              </mat-button-toggle>
+
+            </mat-button-toggle-group>
+          </span>
+        </mat-card-content>
+        <!-- End text button toggle -->
+        <!-- Start paragraph content -->
+        <mat-card-content class="bg-para-content">
+          <h1>Try me!</h1>
+          <p>textAngular is a super cool WYSIWYG Text Editor directive for AngularJS</p>
+          <p><b>Code at GitHub:</b> <span> Here</span></p>
+        </mat-card-content>
+        <!-- End paragraph content -->
+      </div>
+      <!-- End  body content -->
+      <!-- start send message footer -->
+      <mat-card-footer class="bg-color">
+        <span class="spacer"></span>
+        <button mat-stroked-button class="primary btn-align">
+          <mat-icon>message</mat-icon>Send message
+        </button>
+      </mat-card-footer>
+      <!-- End send message footer -->
+    </mat-card>
+    <!-- End card content -->
+  </div>
+  <!--End Main Container card -->
+</section>

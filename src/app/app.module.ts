@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 // import {  } from 'MatDividerModule/MatL';
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     NavComponent,
 
     ChatComponent,
-    MessageComponent
+    MessageComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
